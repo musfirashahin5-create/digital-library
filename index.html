@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Library</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Library Logo">
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="books.html">
+                Books
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="#" onclick="logoutUser()">
+                Logout
+            </a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="themeBtn">
+                🌙
+            </button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                WELCOME TO
+            </p>
+
+            <h1>
+                Your Digital <span>Library</span>
+            </h1>
+
+            <p>
+                Explore books, discover new knowledge,
+                and build your personal digital library
+                in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="books.html" class="primary-btn">
+                    📚 Explore Books
+                </a>
+
+                <a href="favorites.html" class="secondary-btn">
+                    ❤️ My Favorites
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                DISCOVER
+            </p>
+
+            <h2>
+                Explore Categories
+            </h2>
+
+            <p>
+                Find books based on your interests and
+                discover something new to read.
+            </p>
+
+        </div>
+
+
+        <div class="category-container">
+
+
+            <!-- NOVELS -->
+
+            <a href="books.html?category=Novels" class="category-card">
+
+                <div class="category-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Novels
+                </h3>
+
+                <p>
+                    Stories, fiction and classic literature
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- GENERAL KNOWLEDGE -->
+
+            <a href="books.html?category=General%20Knowledge" class="category-card">
+
+                <div class="category-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    General Knowledge
+                </h3>
+
+                <p>
+                    Learn interesting facts and information
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- CODING -->
+
+            <a href="books.html?category=Coding" class="category-card">
+
+                <div class="category-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Coding
+                </h3>
+
+                <p>
+                    Programming languages and concepts
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- SCIENCE -->
+
+            <a href="books.html?category=Science" class="category-card">
+
+                <div class="category-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Science
+                </h3>
+
+                <p>
+                    Explore science and discoveries
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- WEB DEVELOPMENT -->
+
+            <a href="books.html?category=Web%20Development" class="category-card">
+
+                <div class="category-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    HTML, CSS, JavaScript and web technologies
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </a>
+
+
+            <!-- NEW ARRIVALS -->
+
+            <a href="books.html?sort=recent" class="category-card new-category">
+
+                <div class="category-icon">
+                    🆕
+                </div>
+
+                <h3>
+                    New Arrivals
+                </h3>
+
+                <p>
+                    Discover the latest books added to the library
+                </p>
+
+                <span>
+                    View Books →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RECENTLY ADDED ================= -->
+
+    <section class="recent-books">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                LATEST COLLECTION
+            </p>
+
+            <h2>
+                Recently Added Books
+            </h2>
+
+            <p>
+                Explore the latest books added to our digital library.
+            </p>
+
+        </div>
+
+
+        <div class="recent-books-container" id="recentBooksContainer">
+
+            <p class="loading-text">
+                Loading books...
+            </p>
+
+        </div>
+
+
+        <div class="view-all-books">
+
+            <a href="books.html" class="primary-btn">
+
+                View All Books →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY DIGITAL LIBRARY ================= -->
+
+    <section class="features">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                OUR FEATURES
+            </p>
+
+            <h2>
+                Why Use Our Library?
+            </h2>
+
+        </div>
+
+
+        <div class="feature-container">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Easy Search
+                </h3>
+
+                <p>
+                    Quickly find books using title,
+                    author or category.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Save Favorites
+                </h3>
+
+                <p>
+                    Save your favorite books and
+                    access them whenever you want.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Read Digitally
+                </h3>
+
+                <p>
+                    Access digital books online
+                    from your library.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🗂️
+                </div>
+
+                <h3>
+                    Organized Collection
+                </h3>
+
+                <p>
+                    Explore books through different
+                    categories and collections.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Digital Library Management System
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/app.js"></script>
+
+
+    <script>
+
+        /* =========================================
+           RECENTLY ADDED BOOKS
+        ========================================= */
+
+        const recentBooksContainer =
+            document.getElementById(
+                "recentBooksContainer"
+            );
+
+
+        async function loadRecentBooks() {
+
+            try {
+
+                const response = await fetch(
+                    "http://localhost:5000/api/books"
+                );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Failed to fetch books"
+                    );
+
+                }
+
+
+                const books =
+                    await response.json();
+
+
+                if (!books || books.length === 0) {
+
+                    recentBooksContainer.innerHTML = `
+
+                        <div class="empty-books">
+
+                            <p>
+                                No books available yet.
+                            </p>
+
+                            <a
+                                href="books.html"
+                                class="primary-btn">
+
+                                Explore Books
+
+                            </a>
+
+                        </div>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                /*
+                    Show latest 4 books.
+
+                    If database has created_at,
+                    it will be used for sorting.
+                    Otherwise the last 4 records
+                    will be displayed.
+                */
+
+                let recentBooks = [...books];
+
+
+                if (
+                    books.some(
+                        book => book.created_at
+                    )
+                ) {
+
+                    recentBooks.sort(
+                        (a, b) =>
+                            new Date(b.created_at) -
+                            new Date(a.created_at)
+                    );
+
+                }
+
+
+                recentBooks =
+                    recentBooks
+                        .slice(0, 4);
+
+
+                recentBooksContainer.innerHTML =
+                    recentBooks
+                        .map(book => {
+
+                            let imagePath =
+                                book.cover_image;
+
+
+                            if (
+                                imagePath &&
+                                !imagePath.startsWith("http")
+                            ) {
+
+                                imagePath =
+                                    "http://localhost:5000/" +
+                                    imagePath;
+
+                            }
+
+
+                            return `
+
+                                <div class="recent-book-card">
+
+                                    <div class="recent-book-image">
+
+                                        <img
+                                            src="${imagePath || 'images/book-placeholder.jpg'}"
+                                            alt="${book.title}"
+                                            onerror="this.style.display='none'"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="recent-book-info">
+
+                                        <span class="book-category">
+
+                                            ${book.category || "General"}
+
+                                        </span>
+
+
+                                        <h3>
+                                            ${book.title}
+                                        </h3>
+
+
+                                        <p>
+                                            By ${book.author || "Unknown Author"}
+                                        </p>
+
+
+                                        <div class="book-meta">
+
+                                            <span>
+                                                ⭐ ${book.rating || "N/A"}
+                                            </span>
+
+                                            <span>
+                                                📅 ${book.year || "N/A"}
+                                            </span>
+
+                                        </div>
+
+
+                                        <a
+                                            href="book-details.html?id=${book.id}"
+                                            class="book-view-btn">
+
+                                            View Book →
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            `;
+
+                        })
+                        .join("");
+
+
+            } catch (error) {
+
+                console.error(
+                    "Error loading recent books:",
+                    error
+                );
+
+
+                recentBooksContainer.innerHTML = `
+
+                    <div class="empty-books">
+
+                        <p>
+                            Unable to load books.
+                        </p>
+
+                        <a
+                            href="books.html"
+                            class="primary-btn">
+
+                            View Books
+
+                        </a>
+
+                    </div>
+
+                `;
+
+            }
+
+        }
+
+
+        loadRecentBooks();
+
+    </script>
+
+</body>
+
+</html>

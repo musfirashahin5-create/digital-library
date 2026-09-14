@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Digital Library</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Library Logo">
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" onclick="logoutUser()">Logout</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeBtn">🌙</button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-page">
+
+        <div class="page-heading">
+            <p>LIBRARY OVERVIEW</p>
+
+            <h1>
+                Welcome, <span id="userName">User</span> 👋
+            </h1>
+        </div>
+
+
+        <!-- Statistics -->
+
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <h3>Total Books</h3>
+                <h2 id="totalBooks">0</h2>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">❤️</div>
+                <h3>Favorites</h3>
+                <h2 id="totalFavorites">0</h2>
+            </div>
+
+            <div class="stat-card" onclick="showReadBooks()" style="cursor: pointer;">
+                <div class="stat-icon">📖</div>
+                <h3> Read Books</h3>
+                <span id="readBooks" id=readingProgress">0</span>
+            </div>
+
+        </section>
+
+
+        <!-- Reading Progress -->
+
+        <!-- <section class="progress-section">
+
+            <h2>📖 Reading Activity</h2>
+
+            <div class="progress-box">
+
+                <div class="progress-info">
+                    <span>Overall Progress</span>
+                    <span id="progressText">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+
+            </div>
+
+        </section>-->
+
+
+        <!-- Quick Actions -->
+
+        <section class="quick-section">
+
+            <h2>⚡ Quick Actions</h2>
+
+            <div class="quick-container">
+
+                <a href="favorites.html" class="quick-card">
+                    ❤️
+                    <h3>My Favorites</h3>
+                    <p>View your favorite books</p>
+                </a>
+
+                <!-- Continue Reading -->
+                <div class="quick-card" onclick="continueReading()">
+                    <span class="quick-icon">📖</span>
+                    <h3>Continue Reading</h3>
+                    <p>Continue reading your book</p>
+                </div>
+
+                <!-- Recently Added -->
+                <a href="books.html?sort=recent" class="quick-card">
+                    <span class="quick-icon">🕐</span>
+                    <h3>Recently Added</h3>
+                    <p>Explore newly added books</p>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Digital Library Management System</p>
+    </footer>
+
+
+    <script src="js/books.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

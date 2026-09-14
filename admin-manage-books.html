@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Books | Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <!-- ADMIN NAVBAR -->
+
+    <header class="admin-navbar">
+
+        <!-- LOGO -->
+
+        <div class="admin-logo">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <nav class="admin-nav" id="adminNav">
+
+            <a href="admin.html">
+                Dashboard
+            </a>
+
+            <a href="admin-manage-books.html">
+                Books
+            </a>
+
+            <a href="admin-add-book.html">
+                Add New
+            </a>
+
+            <a href="#" onclick="logoutUser()">
+                Logout
+            </a>
+
+        </nav>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="admin-nav-actions">
+
+            <!-- THEME -->
+
+            <button id="adminThemeBtn" class="theme-btn" type="button">
+                🌙
+            </button>
+
+
+            <!-- MOBILE MENU -->
+
+            <button id="adminMenuBtn" class="admin-menu-btn" type="button">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="admin-books-page">
+
+        <!-- PAGE HEADER -->
+
+        <div class="admin-books-header">
+
+            <p class="admin-small-title">
+                ADMIN PANEL
+            </p>
+
+            <h1>
+                Manage Books
+            </h1>
+
+            <p>
+                View, edit and delete books from the digital library.
+            </p>
+
+        </div>
+
+
+        <!-- EXISTING BOOKS -->
+
+        <section class="admin-book-list">
+
+            <h2>
+                📚 Existing Books
+            </h2>
+
+            <section class="admin-book-list">
+
+
+
+                <div class="admin-book-search">
+
+                    <input type="text" id="bookSearch" placeholder="🔍 Search books...">
+
+                </div>
+
+
+
+
+
+                <div id="adminBooksContainer">
+
+                    <p>
+                        Loading books...
+                    </p>
+
+                </div>
+
+            </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="admin-footer">
+
+        <p>
+            © 2026 Digital Library Management System
+        </p>
+
+        <p>
+            Admin Panel
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+    <script src="js/admin-books.js"></script>
+
+</body>
+
+</html>

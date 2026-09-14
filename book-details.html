@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Details | Digital Library</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+     NAVBAR
+========================= -->
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Library Logo">
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" onclick="logoutUser()">Logout</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeBtn">🌙</button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </div>
+    </header>
+
+
+    <!-- =========================
+     BOOK DETAILS
+========================= -->
+
+    <main class="details-page">
+
+        <div id="bookDetails">
+
+            <!-- Book details will be loaded from MySQL -->
+
+            <p>Loading book details...</p>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+     FOOTER
+========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Digital Library Management System
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+     JAVASCRIPT
+========================= -->
+
+    <script src="js/details.js"></script>
+
+</body>
+
+</html>

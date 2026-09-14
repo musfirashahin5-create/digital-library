@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorites | Digital Library</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Library Logo">
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" onclick="logoutUser()">Logout</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeBtn">🌙</button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </div>
+    </header>
+
+
+    <main class="books-page">
+
+        <div class="page-heading">
+            <p>YOUR COLLECTION</p>
+            <h1>❤️ Favorite <span>Books</span></h1>
+        </div>
+
+        <div id="favoriteContainer" class="book-container"></div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Digital Library Management System</p>
+    </footer>
+
+
+    <script src="js/books.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

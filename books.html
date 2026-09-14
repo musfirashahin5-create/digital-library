@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Books | Digital Library</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Library Logo">
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" onclick="logoutUser()">Logout</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button id="themeBtn">🌙</button>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         BOOKS PAGE
+    ========================== -->
+
+    <main class="books-page">
+
+
+        <div class="page-heading">
+
+            <p>
+                EXPLORE OUR COLLECTION
+            </p>
+
+            <h1>
+                All <span>Books</span>
+            </h1>
+
+        </div>
+
+        <!-- =========================
+     SEARCH & FILTER
+========================== -->
+
+        <div class="books-filter-section">
+
+            <!-- SEARCH BAR -->
+
+            <div class="books-search-box">
+
+                <input type="text" id="searchInput" placeholder="🔍 Search books, authors or categories...">
+
+            </div>
+
+
+            <!-- CATEGORY FILTER -->
+
+            <select id="categoryFilter" class="category-filter">
+
+                <option value="">All Categories</option>
+
+                <option value="Tamil">Tamil</option>
+                <option value="English">English</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Botany">Botany</option>
+                <option value="Zoology">Zoology</option>
+
+                <option value="Computer Science">
+                    Computer Science
+                </option>
+
+                <option value="Artificial Intelligence">
+                    Artificial Intelligence
+                </option>
+
+                <option value="Data Science">
+                    Data Science
+                </option>
+
+                <option value="Data Structures">
+                    Data Structures
+                </option>
+
+                <option value="Networking">
+                    Networking
+                </option>
+
+                <option value="Database">
+                    Database
+                </option>
+
+                <option value="Web Development">
+                    Web Development
+                </option>
+
+                <option value="Programming">
+                    Programming
+                </option>
+
+                <option value="Cyber Security">
+                    Cyber Security
+                </option>
+
+                <option value="Cloud Computing">
+                    Cloud Computing
+                </option>
+
+                <option value="Operating Systems">
+                    Operating Systems
+                </option>
+
+                <option value="Software Engineering">
+                    Software Engineering
+                </option>
+
+                <option value="Mobile Development">
+                    Mobile Development
+                </option>
+
+                <option value="Novels">Novels</option>
+                <option value="Coding">Coding </option>
+                <option value="Science">Science</option>
+                <option value="Short Stories">Short Stories</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+                <option value="Economics">Economics</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Management">Management</option>
+                <option value="Psychology">Psychology</option>
+
+                <option value="Self Development">
+                    Self Development
+                </option>
+
+                <option value="Competitive Exams">
+                    Competitive Exams
+                </option>
+
+                <option value="General Knowledge">
+                    General Knowledge
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+
+        <!-- =========================
+             BOOK CONTAINER
+        ========================== -->
+
+        <div id="booksContainer" class="book-container"></div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+        FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Digital Library Management System
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/books.js"></script>
+
+
+</body>
+
+</html>
