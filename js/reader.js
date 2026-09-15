@@ -34,7 +34,7 @@ async function loadReaderBook() {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/books/${bookId}`
+                `https://digital-library-production-0221.up.railway.app/api/books/${bookId}`
             );
 
 
@@ -202,7 +202,7 @@ function openBookPDF() {
     ) {
 
         pdfUrl =
-            `http://localhost:5000/${pdfUrl}`;
+            `https://digital-library-production-0221.up.railway.app/${pdfUrl}`;
 
     }
 

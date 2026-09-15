@@ -63,7 +63,7 @@ async function loadDashboard() {
 
         const booksResponse =
             await fetch(
-                "http://localhost:5000/api/books"
+                "https://digital-library-production-0221.up.railway.app/api/books"
             );
 
 
@@ -104,7 +104,7 @@ async function loadDashboard() {
 
         const userResponse =
             await fetch(
-                `http://localhost:5000/api/users/by-email/${encodeURIComponent(email)}`
+                `https://digital-library-production-0221.up.railway.app/api/users/by-email/${encodeURIComponent(email)}`
             );
 
 
@@ -133,7 +133,7 @@ async function loadDashboard() {
 
         const favoritesResponse =
             await fetch(
-                `http://localhost:5000/api/favorites/${user.id}`
+                `https://digital-library-production-0221.up.railway.app/api/favorites/${user.id}`
             );
 
 

@@ -44,7 +44,7 @@ async function loadFavorites() {
 
         const userResponse =
             await fetch(
-                `http://localhost:5000/api/users/by-email/${encodeURIComponent(email)}`
+                `https://digital-library-production-0221.up.railway.app/api/users/by-email/${encodeURIComponent(email)}`
             );
 
 
@@ -73,7 +73,7 @@ async function loadFavorites() {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/favorites/${user.id}`
+                `https://digital-library-production-0221.up.railway.app/api/favorites/${user.id}`
             );
 
 
@@ -216,7 +216,7 @@ function displayFavorites(
 
             Convert it to:
 
-            http://localhost:5000/uploads/covers/book.jpg
+            https://digital-library-production-0221.up.railway.app/uploads/covers/book.jpg
         */
 
         if (
@@ -225,7 +225,7 @@ function displayFavorites(
         ) {
 
             bookImage =
-                `http://localhost:5000/${bookImage}`;
+                `https://digital-library-production-0221.up.railway.app/${bookImage}`;
 
         }
 
@@ -366,7 +366,7 @@ async function removeFavorite(bookId) {
 
         const userResponse =
             await fetch(
-                `http://localhost:5000/api/users/by-email/${encodeURIComponent(email)}`
+                `https://digital-library-production-0221.up.railway.app/api/users/by-email/${encodeURIComponent(email)}`
             );
 
 
@@ -389,7 +389,7 @@ async function removeFavorite(bookId) {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/favorites/${user.id}/${bookId}`,
+                `https://digital-library-production-0221.up.railway.app/api/favorites/${user.id}/${bookId}`,
                 {
                     method: "DELETE"
                 }

@@ -28,7 +28,7 @@ async function loadBooks() {
         `;
 
         const response = await fetch(
-            "http://localhost:5000/api/books"
+            "https://digital-library-production-0221.up.railway.app/api/books"
         );
 
         if (!response.ok) {
@@ -186,7 +186,7 @@ function displayBooks(bookList = books) {
         ) {
 
             bookImage =
-                `http://localhost:5000/${bookImage}`;
+                `https://digital-library-production-0221.up.railway.app/${bookImage}`;
         }
 
 
@@ -431,7 +431,7 @@ async function addCardFavorite(bookId) {
 
         const userResponse =
             await fetch(
-                `http://localhost:5000/api/users/by-email/${encodeURIComponent(email)}`
+                `https://digital-library-production-0221.up.railway.app/api/users/by-email/${encodeURIComponent(email)}`
             );
 
 
@@ -450,7 +450,7 @@ async function addCardFavorite(bookId) {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/favorites",
+                "https://digital-library-production-0221.up.railway.app/api/favorites",
                 {
                     method: "POST",
 

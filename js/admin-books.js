@@ -3,7 +3,7 @@
 // ADD + EDIT + DELETE + SEARCH
 // =====================================================
 
-const API_URL = "http://localhost:5000/api/books";
+const API_URL = "https://digital-library-production-0221.up.railway.app/api/books";
 
 
 // =====================================================
@@ -501,7 +501,7 @@ function displayAdminBooks(books) {
                     ? (
                         book.cover_image.startsWith("http")
                             ? book.cover_image
-                            : `http://localhost:5000/${book.cover_image}`
+                            : `https://digital-library-production-0221.up.railway.app/${book.cover_image}`
                     )
                     : "";
 

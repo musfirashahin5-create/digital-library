@@ -28,7 +28,7 @@ async function loadBookDetails() {
 
         const response =
             await fetch(
-                `http://localhost:5000/api/books/${bookId}`
+                `https://digital-library-production-0221.up.railway.app/api/books/${bookId}`
             );
 
 
@@ -128,7 +128,7 @@ function displayBookDetails(book) {
     ) {
 
         bookImage =
-            `http://localhost:5000/${bookImage}`;
+            `https://digital-library-production-0221.up.railway.app/${bookImage}`;
 
     }
 
@@ -328,7 +328,7 @@ async function addFavorite(bookId) {
 
         const userResponse =
             await fetch(
-                `http://localhost:5000/api/users/by-email/${encodeURIComponent(email)}`
+                `https://digital-library-production-0221.up.railway.app/api/users/by-email/${encodeURIComponent(email)}`
             );
 
 
@@ -357,7 +357,7 @@ async function addFavorite(bookId) {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/favorites",
+                "https://digital-library-production-0221.up.railway.app/api/favorites",
                 {
 
                     method: "POST",
