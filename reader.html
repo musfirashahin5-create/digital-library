@@ -5,13 +5,11 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Read Book | Digital Library</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -19,13 +17,13 @@
 <body>
 
 
-<!-- =========================
+    <!-- =========================
      NAVBAR
 ========================= -->
 
-   <header class="navbar">
+    <header class="navbar">
         <div class="logo">
-            📚 Digital Library
+            <img src="assets/images/logo.png" alt="Library Logo">
         </div>
 
         <nav class="nav-links" id="navLinks">
@@ -47,99 +45,67 @@
 
 
 
-<!-- =========================
+    <!-- =========================
      READER PAGE
 ========================= -->
 
-<main class="reader-page">
+    <main class="reader-page">
 
 
-    <div class="reader-header">
+        <div class="reader-header">
 
-        <div>
+            <div>
 
-            <p>NOW READING</p>
+                <p>NOW READING</p>
 
-            <h1 id="readerTitle">
-                Loading...
-            </h1>
+                <h1 id="readerTitle">
+                    Loading...
+                </h1>
 
-            <p id="readerAuthor"></p>
+                <p id="readerAuthor"></p>
 
-        </div>
-
-
-        <a
-            href="book-details.html"
-            class="back-btn"
-        >
-            ← Back to Book
-        </a>
-
-    </div>
+            </div>
 
 
-
-    <!-- READER -->
-
-    <div class="reader">
-
-
-        <div
-            class="reader-content"
-            id="readerContent"
-        >
-
-            <p>
-                Loading book content...
-            </p>
+            <a href="book-details.html" class="back-btn">
+                ← Back to Book
+            </a>
 
         </div>
 
 
-        <!-- Reader Controls -->
 
-        <div class="reader-controls">
+        <!-- READER -->
 
-            <button
-                id="prevBtn"
-                onclick="previousChapter()"
-            >
-                ← Previous
-            </button>
+        <div class="reader">
 
 
-            <span id="chapterNumber">
-                Chapter 1
-            </span>
+            <div class="reader-content" id="readerContent">
 
+                <p>
+                    Loading book content...
+                </p>
 
-            <button
-                id="nextBtn"
-                onclick="nextChapter()"
-            >
-                Next →
-            </button>
+            </div>
+
 
         </div>
 
-    </div>
-
-</main>
+    </main>
 
 
 
-<footer>
+    <footer>
 
-    <p>
-        © 2026 Digital Library Management System
-    </p>
+        <p>
+            © 2026 Digital Library Management System
+        </p>
 
-</footer>
+    </footer>
 
 
 
-<script src="js/reader.js"></script>
+    <script src="js/reader.js"></script>
 
 </body>
 
