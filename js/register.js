@@ -96,7 +96,7 @@ registerForm.addEventListener("submit", async function (event) {
 
 
         // =========================
-        // GO TO LOGIN
+        // GO TO login
         // =========================
 
         setTimeout(function () {

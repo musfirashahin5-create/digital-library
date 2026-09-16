@@ -303,7 +303,7 @@ async function addFavorite(bookId) {
 
 
     // =========================
-    // CHECK LOGIN
+    // CHECK login
     // =========================
 
     if (!email) {

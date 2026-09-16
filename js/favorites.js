@@ -15,7 +15,7 @@ const email =
 
 
 // =========================
-// LOGIN CHECK
+// login CHECK
 // =========================
 
 if (!email) {

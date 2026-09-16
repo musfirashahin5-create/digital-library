@@ -75,7 +75,7 @@ async function loadBooks() {
 
 
         // =========================
-        // HOME CATEGORY FILTER
+        // index CATEGORY FILTER
         // =========================
 
         if (category) {

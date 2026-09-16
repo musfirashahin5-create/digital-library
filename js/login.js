@@ -30,7 +30,7 @@ loginForm.addEventListener("submit", async function (event) {
     try {
 
         // =========================
-        // LOGIN API
+        // login API
         // =========================
 
         const response = await fetch(
@@ -54,7 +54,7 @@ loginForm.addEventListener("submit", async function (event) {
 
 
         // =========================
-        // LOGIN FAILED
+        // login FAILED
         // =========================
 
         if (!response.ok) {
@@ -77,7 +77,7 @@ loginForm.addEventListener("submit", async function (event) {
 
 
         // =========================
-        // SAVE LOGIN DETAILS
+        // SAVE login DETAILS
         // =========================
 
         localStorage.setItem(
@@ -126,11 +126,11 @@ loginForm.addEventListener("submit", async function (event) {
 
 
         // =========================
-        // LOGIN SUCCESS
+        // login SUCCESS
         // =========================
 
         loginMessage.textContent =
-            "Login successful! Redirecting...";
+            "login successful! Redirecting...";
 
         loginMessage.style.color = "green";
 
@@ -171,7 +171,7 @@ loginForm.addEventListener("submit", async function (event) {
     catch (error) {
 
         console.error(
-            "Login error:",
+            "login error:",
             error
         );
 
